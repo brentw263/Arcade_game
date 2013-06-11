@@ -1,6 +1,6 @@
 import pygame
 
-import math.pi
+pi = 3.141592653
 
 pygame.init()
 
