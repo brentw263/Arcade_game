@@ -5,6 +5,9 @@ black = (   0,   0,   0)
 white = ( 255, 255, 255)
 green = (   0, 255,   0)
 red   = ( 255,   0,   0)
+blue  = (   0,   0, 255)
+
+pi = 3.14
 
 pygame.init()
 
@@ -44,7 +47,14 @@ while done == False:
 
     for y_offset in range(0,100,10):
         pygame.draw.line(screen,green,[0,10+y_offset],[100,110+y_offset],5)
-        
+        pygame.draw.line(screen,green,[100,-10+y_offset],[0,-110+y_offset],5)
+        pygame.draw.rect(screen,black,[20,20,250,100],2)
+        pygame.draw.ellipse(screen,black,[20,20,250,100],2)
+        pygame.draw.arc(screen,green,[100,100,250,200],  pi/2,    pi,2)
+        pygame.draw.arc(screen,black,[100,100,250,200],     0,  pi/2,2)
+        pygame.draw.arc(screen,red  ,[100,100,250,200],3*pi/2,  2*pi,2)
+        pygame.draw.arc(screen,blue ,[100,100,250,200],    pi,3*pi/2,2)
+        pygame.draw.polygon(screen,green,[[100,50],[400,20],[30,200]],5)
     #ALL CODE TO DRAW SHOULE GO ABOVE THIS COMMENT.
 
     #Go ahead and update the screen with what we've drawn.
