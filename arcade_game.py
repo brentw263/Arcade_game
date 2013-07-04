@@ -45,6 +45,19 @@ while done == False:
     #above this or they will be erased.
     screen.fill(white)
 
+    #Select font to use. None is default.
+    font = pygame.font.Font(None,25)
+
+    #Render the text. "True" means anti-aliased text.
+    #Black is the color. The variable black was defined
+    #above as a list of [0,0,0]
+    #Note: This line creates an image of the letters,
+    #but does not put it on the screen yet.
+    text = font.render("My text", True, black)
+
+    #Put the image of the text on the screen at 250x250
+    screen.blit(text, [250,250])
+
     for y_offset in range(0,100,10):
         pygame.draw.line(screen,green,[0,10+y_offset],[100,110+y_offset],5)
         pygame.draw.line(screen,green,[100,-10+y_offset],[0,-110+y_offset],5)
